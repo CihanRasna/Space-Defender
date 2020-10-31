@@ -10,10 +10,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Destroyer.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnemyPathing.cs" />
+        <option value="$PROJECT_DIR$/Assets/WaveConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/WaveConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/EnemyPathing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Spawner.cs" />
       </list>
     </option>
   </component>
@@ -62,7 +72,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604060515002</updated>
-      <workItem from="1604060521881" duration="2111000" />
+      <workItem from="1604060521881" duration="7488000" />
+      <workItem from="1604102265547" duration="4279000" />
     </task>
     <servers />
   </component>
