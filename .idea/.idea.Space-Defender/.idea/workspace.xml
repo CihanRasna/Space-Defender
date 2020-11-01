@@ -11,19 +11,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Destroyer.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyPathing.cs" />
         <option value="$PROJECT_DIR$/Assets/WaveConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/WaveConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/EnemyPathing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/DamageDealer.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/EnemyPathing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/WaveConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/BackgroundScroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -42,6 +46,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -74,6 +79,10 @@
       <updated>1604060515002</updated>
       <workItem from="1604060521881" duration="7488000" />
       <workItem from="1604102265547" duration="4279000" />
+      <workItem from="1604151589095" duration="1598000" />
+      <workItem from="1604178504301" duration="405000" />
+      <workItem from="1604188844905" duration="5039000" />
+      <workItem from="1604232452512" duration="4765000" />
     </task>
     <servers />
   </component>
@@ -84,5 +93,15 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="345" y="57" key="#Inspection_severity" timestamp="1604196700142">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="345" y="57" key="#Inspection_severity/0.0.1536.824@0.0.1536.824" timestamp="1604196700142" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1604195901851">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604195901851" />
   </component>
 </project>

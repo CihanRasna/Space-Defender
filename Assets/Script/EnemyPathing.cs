@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyPathing : MonoBehaviour
@@ -8,7 +7,7 @@ public class EnemyPathing : MonoBehaviour
     
     private List<Transform> waypoints;
 
-    private int waypointIndex = 0;
+    private int waypointIndex;
     
     void Start()
     {
@@ -22,6 +21,7 @@ public class EnemyPathing : MonoBehaviour
         EnemyMovement();
     }
 
+    // ReSharper disable once ParameterHidesMember
     public void SetWaveConfig(WaveConfig waveConfig)
     {
         this.waveConfig = waveConfig;

@@ -1,28 +1,31 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Player Setting")] [SerializeField]
     private float shipSpeed = 10f;
-    private float xMin, xMax, yMin, Ymax;
-    
-    [SerializeField] private GameObject laserPrefab;
-    
+
     [SerializeField] private float padding = 1f;
+    [SerializeField] private int health = 300;
+
+    [Header("Projectile Settings")] [SerializeField]
+    private GameObject laserPrefab;
+
     [SerializeField] private float projectileSpeed = 20f;
     [SerializeField] private float firingPeriod = 0.2f;
-    
-    
+
+    private float xMin, xMax, yMin, yMax;
+
     private IEnumerator fireRepeatly;
 
-    void Start()
+    private void Start()
     {
         fireRepeatly = FireRepeat();
         MovementLimits();
     }
 
-    void Update()
+    private void Update()
     {
         Move();
         PlayerFire();
@@ -41,32 +44,33 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator FireRepeat()
+    private IEnumerator FireRepeat()
     {
         while (true)
         {
-            GameObject laser = 
+            var laser =
                 Instantiate(laserPrefab, transform.position, Quaternion.identity);
-            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0 ,projectileSpeed);
+            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
             yield return new WaitForSeconds(firingPeriod);
         }
+        // ReSharper disable once IteratorNeverReturns
     }
 
     private void Move()
     {
         var xSpeed = Input.GetAxis("Horizontal") * shipSpeed * Time.deltaTime;
         var ySpeed = Input.GetAxis("Vertical") * shipSpeed * Time.deltaTime;
-        
+
         var position = transform.position;
-        
+
         var xPos = Mathf.Clamp(position.x + xSpeed, xMin, xMax);
-        var yPos = Mathf.Clamp(position.y + ySpeed, yMin, Ymax);
-        
-        position = new Vector2(xPos,yPos);
-        
+        var yPos = Mathf.Clamp(position.y + ySpeed, yMin, yMax);
+
+        position = new Vector2(xPos, yPos);
+
         transform.position = position;
     }
-    
+
     private void MovementLimits()
     {
         var mainCamera = Camera.main;
@@ -74,8 +78,27 @@ public class Player : MonoBehaviour
         xMin = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
         xMax = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
         yMin = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
-        Ymax = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
+        yMax = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
     
     
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+        if (!damageDealer)
+        {
+         return;   
+        }
+        PlayerHit(damageDealer);
+    }
+
+    private void PlayerHit(DamageDealer damageDealer)
+    {
+        health -= damageDealer.GetDamage();
+        damageDealer.Hit();
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

@@ -6,9 +6,15 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private List<WaveConfig> waveConfigs;
     private int startingWave = 0;
-    void Start()
+
+    [SerializeField] private bool isLooping;
+    IEnumerator Start()
     {
-        StartCoroutine(SpawnAllWaves());
+        do
+        { 
+            yield return StartCoroutine(SpawnAllWaves());
+        } while (isLooping);
+        
     }
 
     private IEnumerator SpawnAllWaves()
@@ -31,11 +37,5 @@ public class Spawner : MonoBehaviour
             
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawn());
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
