@@ -25,9 +25,17 @@
         <option value="$PROJECT_DIR$/Assets/Script/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/EnemyPathing.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/WaveConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/BackgroundScroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/SetVolume.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Volume.cs" />
+        <option value="$PROJECT_DIR$/Assets/LevelController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Music.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/ScoreDisplayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/LevelController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/HealthDisplayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Player.cs" />
       </list>
     </option>
   </component>
@@ -82,7 +90,10 @@
       <workItem from="1604151589095" duration="1598000" />
       <workItem from="1604178504301" duration="405000" />
       <workItem from="1604188844905" duration="5039000" />
-      <workItem from="1604232452512" duration="4765000" />
+      <workItem from="1604232452512" duration="5482000" />
+      <workItem from="1604257884089" duration="8009000" />
+      <workItem from="1604339503473" duration="2142000" />
+      <workItem from="1604347290071" duration="28000" />
     </task>
     <servers />
   </component>

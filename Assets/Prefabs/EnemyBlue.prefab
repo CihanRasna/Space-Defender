@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1220193706}
   - component: {fileID: 8410227049433936626}
   - component: {fileID: 4080398852059564308}
+  - component: {fileID: -5331304885109483569}
+  - component: {fileID: 6482381099520682644}
   m_Layer: 9
   m_Name: EnemyBlue
   m_TagString: Untagged
@@ -153,8 +155,46 @@ MonoBehaviour:
   minTimeBetweenShot: 0.2
   maxTimeBetweenShot: 2
   projectileSpeed: 10
-  explosionDestroy: 1
   enemyLaser: {fileID: 4075097470681077356, guid: 16a659316847ed6469b86b1dabda77d4,
     type: 3}
   deathVFX: {fileID: 4080111893287185572, guid: b7004405533b858498040a3e7118e4f5,
     type: 3}
+  deathSound: {fileID: 8300000, guid: 6fd23a2fbb9911a4ea453764061a4134, type: 3}
+  deathVolume: 0.8
+  enemyShootSound: {fileID: 8300000, guid: 2fd148f9bc8f8374fa0ac06e9db9b355, type: 3}
+  shootVolume: 0.2
+  explosionDestroy: 1
+--- !u!50 &-5331304885109483569
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7171957934284919502}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &6482381099520682644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7171957934284919502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6c7f0b6bdf9f74ab70d657f4732249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 500
